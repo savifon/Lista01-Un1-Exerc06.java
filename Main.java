@@ -7,6 +7,8 @@ Dica: pode-se implementar o “estado” como um atributo String da classe. Na c
 class Main {
   public static void main(String[] args) {
     Lampada l1 = new Lampada("l1", "apagada");
+		Lampada l2 = new Lampada("l2", "acesa");
+		Lampada l3 = new Lampada("l3", "meia-luz");
   }
 }
 
@@ -22,7 +24,13 @@ class Lampada {
 		estado = e;
 	}
 
-	public static boolean Acender(Lampada l) {
-		return true;
+	public void Acender(Lampada l) {
+		estado = "acesa";
+	}
+	public void Apagar(Lampada l) {
+		estado = "apagada";
+	}
+	public void AcenderMeiaLuz(Lampada l) {
+		estado = "meia-luz";
 	}
 }
